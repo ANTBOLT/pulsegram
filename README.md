@@ -1,112 +1,105 @@
-﻿<div align="center">
+# PulseGram
 
-# ⚡ PulseGram
+PulseGram is a modified Telegram client for Android based on Telegram, Nagram, and Nekogram with integrated AyuGram message saving, AI/LLM providers, and enhanced privacy features.
 
-### Мощный, приватный и интеллектуальный Telegram-клиент для Android
+## Downloads
 
-[![GitHub Release](https://img.shields.io/github/v/release/ANTBOLT/pulsegram?style=for-the-badge&color=2563eb)](https://github.com/ANTBOLT/pulsegram/releases)
-[![Telegram Channel](https://img.shields.io/badge/Telegram-@yawprod-2ba3e7?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/yawprod)
-[![Android](https://img.shields.io/badge/Android-8.1%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
-[![License](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](LICENSE)
+* [Telegram Channel](https://t.me/yawprod)
+* [GitHub Releases](https://github.com/ANTBOLT/pulsegram/releases)
 
-[**📥 Скачать актуальный APK**](https://github.com/ANTBOLT/pulsegram/releases/latest) • [**📢 Telegram-канал проекта**](https://t.me/yawprod) • [**💬 Обсуждение и новости**](https://t.me/yawprod)
-
----
-
-</div>
-
-**PulseGram** — это независимый форк Telegram для Android, созданный для тех, кому важен бескомпромиссный контроль над конфиденциальностью, расширенные функции интерфейса и возможности искусственного интеллекта прямо в ваших диалогах.
+### Package Info
+* Package name: `nu.gpu.nagram`
+* Base version: Telegram Android v12.10.0
 
 ---
 
-## 🌟 Ключевые возможности
+## Features
 
-### 🛡️ Полная приватность и Режим «Призрак» (Ghost Mode)
-* **Скрытое чтение сообщений**: читайте входящие диалоги и чаты без отметки о прочтении (не отправляются галочки).
-* **Скрытый просмотр историй (Stories)**: смотрите истории любых пользователей полностью анонимно.
-* **Скрытие статуса набора**: собеседники не увидят индикатор «печатает...» или «записывает голосовое».
-* **Заморозка онлайна**: ваш статус активности остаётся скрытым.
+### Privacy & Ghost Mode
+* **Ghost Mode**: Do not send read markers for incoming messages
+* **Stories Stealth**: Do not send view receipts when watching Stories
+* **Typing Status**: Hide typing and audio recording indicators
+* **Online Status**: Conceal online presence
+* **Local Last Seen**: Save and display local last seen timestamps
 
-### 💾 Сохранение удалённых сообщений и история правок
-* **Защита от удаления**: удалённые собеседником сообщения остаются в вашем локальном хранилище с наглядной пометкой `[удалено]`.
-* **История редактирования**: просмотр полной хронологии правок сообщений до того, как их изменили.
+### Message & Media Saving (AyuGram)
+* **Save Deleted Messages**: Retain messages deleted by other users with customizable `[deleted]` tag
+* **Edit History**: Track and view message edit history
+* **Media Retention**: Save self-destructing and deleted media (photos, videos, voice notes)
+* **Granular Scope**: Independently configure saving in private chats, groups, and channels
+* **Clear Database**: Built-in option to purge saved message history from Room DB
 
-### 🧠 Встроенный искусственный интеллект (LLM)
-* Прямая интеграция с ведущими нейросетями: **OpenAI (GPT-4o/5)**, **Google Gemini**, **DeepSeek**, **Groq**, **xAI Grok**, **Cerebras**, **OpenRouter**, **Ollama** и собственными API-эндпоинтами.
-* Генерация ответов, суммирование длинных переписок и умный AI-переводчик.
+### AI & LLM Integration
+* **Supported Providers**: OpenAI, Google Gemini (AI Studio & Vertex), Groq, DeepSeek, xAI (Grok), Cerebras, Ollama Cloud, OpenRouter, Vercel AI Gateway, and custom OpenAI-compatible endpoints
+* **Context-Aware Translation**: Translates messages using chat context
+* **Custom Prompts**: User-configurable system prompts and temperature settings
 
-### 🌐 Продвинутый переводчик сообщений
-* Перевод текста через передовые сервисы с **полным сохранением форматирования** (жирный, курсив, спойлеры, цитаты и ссылки не ломаются).
-* Поддержка быстрого автоперевода входящих и исходящих сообщений на лету.
+### Translation & Transcription
+* **Nekogram Translator**: Translate text via Google, DeepL, Yandex, LibreTranslate, Lingva, or LLM
+* **Formatting Preservation**: Keeps Markdown, spoilers, bold, quotes, and links intact during translation
+* **Free Audio Transcription**: Speech-to-text for voice and video notes via external STT / Whisper API without Telegram Premium
 
-### 🎙️ Бесплатная транскрибация голосовых (Speech-to-Text)
-* Расшифровка голосовых сообщений и видеосообщений («кружочков») в текст без необходимости платной подписки Telegram Premium (через внешние API / Whisper).
+### Chat & Messaging
+* **Forwarding Options**: Forward messages without quotes or authors
+* **Repeat as Copy**: Resend messages as direct copies
+* **Text Formatting Bar**: Quick toggles and customizable ordering for bold, italic, monospace, strikethrough, underline, quote, spoiler, and link
+* **Audio Enhancements**: Noise suppression and voice enhancement for voice notes
+* **Double Tap Actions**: Configurable double-tap action (reply, react, translate, etc.)
+* **Message Details**: Show exact message ID and precise timestamp
+* **Bypass Restrictions**: Allow saving content and taking screenshots in protected chats
 
-### 🎨 Кастомизация и удобство интерфейса
-* **Material You / Monet**: динамические системные цвета, адаптирующиеся под обои устройства.
-* **Кастомные шрифты и эмодзи**: поддержка внешних TTF-шрифтов и кастомных пакетов эмодзи.
-* **Альтернативные карты**: переключение между Google Maps и OpenStreetMap (OSM).
-* **UnifiedPush**: поддержка независимых push-уведомлений без зависимости от сервисов Google.
+### Media & Player
+* **Decoder Selection**: Switch between hardware and software ExoPlayer decoders
+* **Playback Speed**: Fine-grained playback speed control for audio and video
+* **OpenStreetMap**: Option to use OSM instead of Google Maps
+
+### UI & Customization
+* **Material You**: Dynamic Monet theme support based on system colors
+* **Custom Fonts**: Support for loading external `.ttf` / `.otf` fonts
+* **Custom Emoji Packs**: Support for external emoji sets
+* **Interface Cleanup**: Options to hide Telegram Premium and Help sections in Settings
+* **Drawer & Toolbar**: Configurable drawer items and action bar buttons
+
+### Network & Push
+* **UnifiedPush**: Full support for UnifiedPush distributors (de-Googled push notifications)
+* **Custom DNS / DoH**: Built-in DNS-over-HTTPS via dnsjava
+* **Proxy Automation**: Automatically disable proxy when VPN connection is active
 
 ---
 
-## 📥 Загрузка и установка
+## Compilation Guide
 
-Все официальные релизы собираются и подписываются в автоматическом пайплайне:
-
-| Архитектура | Для каких устройств | Ссылка на загрузку |
-|---|---|---|
-| **ARM64-v8a** *(Рекомендуется)* | Практически все современные смартфоны и планшеты | [👉 **Скачать arm64 APK**](https://github.com/ANTBOLT/pulsegram/releases/latest) |
-| **Universal** | Подходит для всех процессоров (arm64, armeabi-v7a, x86_64) | [👉 **Скачать Universal APK**](https://github.com/ANTBOLT/pulsegram/releases/latest) |
-
-> [!TIP]
-> Подписывайтесь на наш официальный канал [**@yawprod**](https://t.me/yawprod), чтобы первыми узнавать о свежих релизах, новых фичах и обновлениях!
-
----
-
-## 🛠️ Сборка из исходников
-
-### Вариант 1: Сборка через GitHub Actions (Рекомендуемый)
-1. Сделайте **Fork** этого репозитория.
-2. Перейдите во вкладку **Actions** в вашем репозитории.
-3. Выберите воркфлоу **Release Build** и нажмите **Run workflow**.
-4. Облачный раннер автоматически скомпилирует нативные библиотеки и выложит готовые подписанные APK в раздел Releases и Artifacts.
-
-### Вариант 2: Локальная сборка
-1. Клонируйте проект вместе с субмодулями:
+1. Clone the repository with submodules:
    ```bash
    git clone --recursive --shallow-submodules https://github.com/ANTBOLT/pulsegram.git
    cd pulsegram
    ```
-2. Убедитесь, что установлены:
-   * **JDK 21**
-   * **Android SDK Platform 37** и **Build-Tools 36.0.0**
-   * **Android NDK 27.2.12479018**
-   * **CMake 3.31+** и **NASM**
-3. Запустите сборку:
+
+2. Configure Telegram API credentials in `local.properties`:
+   ```properties
+   TELEGRAM_APP_ID=39680981
+   TELEGRAM_APP_HASH=1295d5b2c4577850b35e8d6ffb4ca17c
+   ```
+
+3. Build with Gradle:
    ```bash
    ./gradlew TMessagesProj:assembleRelease
    ```
-   Готовые APK появятся в каталоге `TMessagesProj/build/outputs/apk/release/`.
+
+   *Requirements: JDK 21, Android SDK Platform 37, Build-Tools 36.0.0, NDK 27.2.12479018, CMake 3.31+, and NASM.*
+
+Alternatively, trigger the automated **Release Build** workflow via GitHub Actions to compile in the cloud.
 
 ---
 
-## 👥 Сообщество и связь
+## Acknowledgments
 
-* 📢 Официальный канал проекта: **[t.me/yawprod](https://t.me/yawprod)**
-* 🐛 Сообщить об ошибке или предложить фичу: [GitHub Issues](https://github.com/ANTBOLT/pulsegram/issues)
+* [Telegram for Android](https://github.com/DrKLO/Telegram)
+* [Nagram](https://github.com/NextAlone/Nagram)
+* [Nekogram](https://github.com/Nekogram/Nekogram)
+* [AyuGram](https://github.com/AyuGram/AyuGram4A)
+* [Cherrygram](https://github.com/arsLan4k1390/Cherrygram)
+* [exteraGram](https://github.com/exteraSquad/exteraGram)
+* [OctoGram](https://github.com/OctoGramApp/OctoGram)
 
----
-
-## ❤️ Благодарности
-
-PulseGram построен с благодарностью разработчикам и сообществу открытого исходного кода:
-* Официальному клиенту **Telegram для Android**
-* Наработкам проектов **Nekogram**, **Nagram**, **AyuGram**, **Cherrygram** и **exteraGram**
-
----
-
-<div align="center">
-  <sub>PulseGram распространяется под лицензией <a href="LICENSE">GNU General Public License v3.0</a>.</sub>
-</div>
 
