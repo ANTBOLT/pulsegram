@@ -31,6 +31,17 @@ jobs:
         with:
           fetch-depth: 1
           submodules: recursive
+      - name: Fetch Submodules
+        run: |
+          mkdir -p TMessagesProj/jni/third_party/xiph TMessagesProj/jni/tlottie TMessagesProj/lib
+          [ -d "TMessagesProj/jni/third_party/xiph/opusfile/src" ] || git clone --depth 1 https://github.com/xiph/opusfile.git TMessagesProj/jni/third_party/xiph/opusfile
+          [ -d "TMessagesProj/jni/third_party/xiph/ogg/src" ] || git clone --depth 1 https://github.com/xiph/ogg.git TMessagesProj/jni/third_party/xiph/ogg
+          [ -d "TMessagesProj/jni/third_party/xiph/opus/include" ] || git clone --depth 1 https://github.com/xiph/opus.git TMessagesProj/jni/third_party/xiph/opus
+          [ -d "TMessagesProj/jni/third_party/libvpx/vpx" ] || git clone --depth 1 https://github.com/webmproject/libvpx.git TMessagesProj/jni/third_party/libvpx
+          [ -d "TMessagesProj/jni/third_party/dav1d/include" ] || git clone --depth 1 https://github.com/videolan/dav1d.git TMessagesProj/jni/third_party/dav1d
+          [ -d "TMessagesProj/jni/third_party/ffmpeg/libavcodec" ] || git clone --depth 1 https://github.com/FFmpeg/FFmpeg.git TMessagesProj/jni/third_party/ffmpeg
+          [ -d "TMessagesProj/lib/jlatexmath/pom.xml" ] || git clone --depth 1 https://github.com/dkaraush/jlatexmath-android.git TMessagesProj/lib/jlatexmath
+          [ -d "TMessagesProj/jni/tlottie/include" ] || git clone --depth 1 https://github.com/dkaraush/tlottie.git TMessagesProj/jni/tlottie
       - name: Set up JDK
         uses: actions/setup-java@v5
         with:
