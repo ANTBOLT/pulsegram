@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="XChannel">کانال Nagram X</string>
+    <string name="XChannel">کانال PulseGram</string>
     <string name="EnableSaveDeletedMessages">نمایش پیام‌های حذف شده</string>
     <string name="DeletedMessage">حذف شده</string>
     <string name="EnableSaveEditsHistory">ذخیره تاریخچه ویرایش پیام‌ها</string>
@@ -336,3 +336,4 @@
     <string name="DeepLTranslateKeyNotice">کلید رابط برنامه‌نویسی DeepL را پیکربندی کنید، برای استفاده از اعتبارنامه‌های داخلی آن را خالی بگذارید.</string>
     <string name="DefaultScheduleDelay">تاخیر پیش‌فرض</string>
 </resources>
+
