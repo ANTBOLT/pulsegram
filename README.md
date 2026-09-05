@@ -1,92 +1,111 @@
-# Nagram X
+<div align="center">
 
-> [!IMPORTANT]
-> This project is archived and no longer maintained. No further updates, bug fixes, or support will be provided. The source code and existing releases remain available for reference and for anyone who wishes to continue development in a fork.
+# ⚡ Pulsegram
 
-## Archived Downloads
+### Мощный, приватный и интеллектуальный Telegram-клиент для Android
 
-Previously published versions remain available through:
+[![GitHub Release](https://img.shields.io/github/v/release/ANTBOLT/pulsegram?style=for-the-badge&color=2563eb)](https://github.com/ANTBOLT/pulsegram/releases)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-@yawprod-2ba3e7?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/yawprod)
+[![Android](https://img.shields.io/badge/Android-8.1%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](LICENSE)
 
-* [Telegram Channel](https://t.me/NagramX)
-* [GitHub Releases](https://github.com/risin42/NagramX/releases)
+[**📥 Скачать актуальный APK**](https://github.com/ANTBOLT/pulsegram/releases/latest) • [**📢 Telegram-канал проекта**](https://t.me/yawprod) • [**💬 Обсуждение и новости**](https://t.me/yawprod)
 
-## Verify APK
+---
 
-Official APKs use the following Android signing certificate:
+</div>
 
-* Package name: `nu.gpu.nagram` / `nu.gpu.nagramx` (base version)
-* SHA-256: `0D:51:91:56:E8:0C:91:8C:28:C4:80:BF:D1:3F:31:6A:3B:3B:F7:22:DB:53:2F:AB:74:66:0E:C8:E5:C5:06:A1`
+**Pulsegram** — это независимый форк Telegram для Android, созданный для тех, кому важен бескомпромиссный контроль над конфиденциальностью, расширенные функции интерфейса и возможности искусственного интеллекта прямо в ваших диалогах.
 
-## Compilation Guide
+---
 
-1. Clone the repository with its submodules:
+## 🌟 Ключевые возможности
 
-    ```bash
-    git clone --recursive --shallow-submodules https://github.com/risin42/NagramX.git NagramX
-    ```
+### 🛡️ Полная приватность и Режим «Призрак» (Ghost Mode)
+* **Скрытое чтение сообщений**: читайте входящие диалоги и чаты без отметки о прочтении (не отправляются галочки).
+* **Скрытый просмотр историй (Stories)**: смотрите истории любых пользователей полностью анонимно.
+* **Скрытие статуса набора**: собеседники не увидят индикатор «печатает...» или «записывает голосовое».
+* **Заморозка онлайна**: ваш статус активности остаётся скрытым.
 
-    If you already cloned the repository without submodules, run:
+### 💾 Сохранение удалённых сообщений и история правок
+* **Защита от удаления**: удалённые собеседником сообщения остаются в вашем локальном хранилище с наглядной пометкой `[удалено]`.
+* **История редактирования**: просмотр полной хронологии правок сообщений до того, как их изменили.
 
-    ```bash
-    git submodule update --init --recursive --depth=1
-    ```
+### 🧠 Встроенный искусственный интеллект (LLM)
+* Прямая интеграция с ведущими нейросетями: **OpenAI (GPT-4o/5)**, **Google Gemini**, **DeepSeek**, **Groq**, **xAI Grok**, **Cerebras**, **OpenRouter**, **Ollama** и собственными API-эндпоинтами.
+* Генерация ответов, суммирование длинных переписок и умный AI-переводчик.
 
-2. Obtain API credentials (`TELEGRAM_APP_ID` and `TELEGRAM_APP_HASH`) from [Telegram Developer Portal](https://my.telegram.org/auth). Create `local.properties` in the project root with:
+### 🌐 Продвинутый переводчик сообщений
+* Перевод текста через передовые сервисы с **полным сохранением форматирования** (жирный, курсив, спойлеры, цитаты и ссылки не ломаются).
+* Поддержка быстрого автоперевода входящих и исходящих сообщений на лету.
 
-   ```properties
-   TELEGRAM_APP_ID=<your_telegram_app_id>
-   TELEGRAM_APP_HASH=<your_telegram_app_hash>
+### 🎙️ Бесплатная транскрибация голосовых (Speech-to-Text)
+* Расшифровка голосовых сообщений и видеосообщений («кружочков») в текст без необходимости платной подписки Telegram Premium (через внешние API / Whisper).
+
+### 🎨 Кастомизация и удобство интерфейса
+* **Material You / Monet**: динамические системные цвета, адаптирующиеся под обои устройства.
+* **Кастомные шрифты и эмодзи**: поддержка внешних TTF-шрифтов и кастомных пакетов эмодзи.
+* **Альтернативные карты**: переключение между Google Maps и OpenStreetMap (OSM).
+* **UnifiedPush**: поддержка независимых push-уведомлений без зависимости от сервисов Google.
+
+---
+
+## 📥 Загрузка и установка
+
+Все официальные релизы собираются и подписываются в автоматическом пайплайне:
+
+| Архитектура | Для каких устройств | Ссылка на загрузку |
+|---|---|---|
+| **ARM64-v8a** *(Рекомендуется)* | Практически все современные смартфоны и планшеты | [👉 **Скачать arm64 APK**](https://github.com/ANTBOLT/pulsegram/releases/latest) |
+| **Universal** | Подходит для всех процессоров (arm64, armeabi-v7a, x86_64) | [👉 **Скачать Universal APK**](https://github.com/ANTBOLT/pulsegram/releases/latest) |
+
+> [!TIP]
+> Подписывайтесь на наш официальный канал [**@yawprod**](https://t.me/yawprod), чтобы первыми узнавать о свежих релизах, новых фичах и обновлениях!
+
+---
+
+## 🛠️ Сборка из исходников
+
+### Вариант 1: Сборка через GitHub Actions (Рекомендуемый)
+1. Сделайте **Fork** этого репозитория.
+2. Перейдите во вкладку **Actions** в вашем репозитории.
+3. Выберите воркфлоу **Release Build** и нажмите **Run workflow**.
+4. Облачный раннер автоматически скомпилирует нативные библиотеки и выложит готовые подписанные APK в раздел Releases и Artifacts.
+
+### Вариант 2: Локальная сборка
+1. Клонируйте проект вместе с субмодулями:
+   ```bash
+   git clone --recursive --shallow-submodules https://github.com/ANTBOLT/pulsegram.git
+   cd pulsegram
    ```
-
-3. For APK signing: Replace `release.keystore` with your keystore and add signing configuration to `local.properties`:
-
-   ```properties
-   KEYSTORE_PASS=<your_keystore_password>
-   ALIAS_NAME=<your_alias_name>
-   ALIAS_PASS=<your_alias_password>
+2. Убедитесь, что установлены:
+   * **JDK 21**
+   * **Android SDK Platform 37** и **Build-Tools 36.0.0**
+   * **Android NDK 27.2.12479018**
+   * **CMake 3.31+** и **NASM**
+3. Запустите сборку:
+   ```bash
+   ./gradlew TMessagesProj:assembleRelease
    ```
+   Готовые APK появятся в каталоге `TMessagesProj/build/outputs/apk/release/`.
 
-4. For FCM support: Replace `TMessagesProj/google-services.json` with your own configuration file.
+---
 
-5. Replace project-specific metadata:
+## 👥 Сообщество и связь
 
-    - Set your Google Maps API key in the `com.google.android.maps.v2.API_KEY` meta-data entry in `TMessagesProj/src/main/AndroidManifest.xml`.
-    - Set `BaseRemoteHelper.CHANNEL_METADATA_ID` in `TMessagesProj/src/main/java/tw/nekomimi/nekogram/helpers/remote/BaseRemoteHelper.java` to your metadata channel's numeric ID, without the `-100` prefix.
+* 📢 Официальный канал проекта: **[t.me/yawprod](https://t.me/yawprod)**
+* 🐛 Сообщить об ошибке или предложить фичу: [GitHub Issues](https://github.com/ANTBOLT/pulsegram/issues)
 
-6. Open the project in Android Studio to start building.
+---
 
-## GitHub Actions Build
+## ❤️ Благодарности
 
-The workflow can be used from a fork of this repository.
+Pulsegram построен с благодарностью разработчикам и сообществу открытого исходного кода:
+* Официальному клиенту **Telegram для Android**
+* Наработкам проектов **Nekogram**, **Nagram**, **AyuGram**, **Cherrygram** и **exteraGram**
 
-1. Replace `TMessagesProj/release.keystore` with your keystore file.
+---
 
-2. Configure `local.properties` with the following:
-
-   ```properties
-   KEYSTORE_PASS=<your_keystore_password>
-   ALIAS_NAME=<your_alias_name>
-   ALIAS_PASS=<your_alias_password>
-   TELEGRAM_APP_ID=<your_telegram_app_id>
-   TELEGRAM_APP_HASH=<your_telegram_app_hash>
-   ```
-
-   Base64 encode the contents of this file.
-
-3. Configure GitHub Action secrets:
-   - `LOCAL_PROPERTIES`: Base64-encoded content from step 2
-   - `HELPER_BOT_TOKEN`: Telegram bot token from [@Botfather](https://t.me/Botfather) (e.g., `1111:abcd`)
-   - `HELPER_BOT_TARGET`: Primary Telegram chat ID (e.g., `777000`)
-   - `HELPER_BOT_CANARY_TARGET`: Chat ID for test builds and metadata (can match `HELPER_BOT_TARGET`)
-
-4. Trigger the Release Build workflow.
-
-## Acknowledgments
-
-- [AyuGram](https://github.com/AyuGram/AyuGram4A)
-- [Cherrygram](https://github.com/arsLan4k1390/Cherrygram)
-- [Dr4iv3rNope](https://github.com/Dr4iv3rNope/NotSoAndroidAyuGram)
-- [exteraGram](https://github.com/exteraSquad/exteraGram)
-- [Nagram](https://github.com/NextAlone/Nagram)
-- [Nekogram](https://github.com/Nekogram/Nekogram)
-- [OctoGram](https://github.com/OctoGramApp/OctoGram)
+<div align="center">
+  <sub>Pulsegram распространяется под лицензией <a href="LICENSE">GNU General Public License v3.0</a>.</sub>
+</div>
