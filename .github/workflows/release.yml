@@ -125,7 +125,7 @@ jobs:
         if: always()
         with:
           tag_name: v12.10.0-${{ needs.build.outputs.build_timestamp }}
-          name: Pulsegram v12.10.0
+          name: PulseGram v12.10.0
           files: artifacts/**/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="NekoSettings">Cài đặt PulseGram</string>
     <string name="IPv6">Ưu tiên IPv6</string>
@@ -70,7 +70,7 @@
     <string name="CallTo">Gọi cho **%1$s**?</string>
     <string name="DisableNumberRounding">Vô hiệu hoá làm tròn số</string>
     <string name="Categories">Danh mục</string>
-    <string name="OfficialChannel">Kênh của Nagram</string>
+    <string name="OfficialChannel">Kênh của PulseGram</string>
     <string name="About">Thông tin</string>
     <string name="IgnoreBlockedAbout">Bạn sẽ không thấy tin nhắn của người đã chặn trong nhóm.</string>
     <string name="SourceCode">Mã nguồn</string>
